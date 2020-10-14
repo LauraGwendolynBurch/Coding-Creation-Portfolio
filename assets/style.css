@@ -17,23 +17,35 @@ body {
  } 
   
     
-h1 {
+.header h1 {
     color: #31343d;
     background: #92ccce;
-    padding: 25px;
+    padding: 5px;
     float: left;
+    font-size: 40px;
+    width: 33%;
+    height: 90%;
+    margin-right: 0px;
+    
 }
 
-
-nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.header a {
+    color: #92ccce;
+    display: block;
+    padding: 7px 8px;
     font-size: 20px;
+    letter-spacing: 3px;
+    text-decoration: underline;
 }
 
-li {
-    display: inline;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header li {
     float: right;
 }
 
@@ -44,4 +56,18 @@ li {
     background-image: url("./images/pexels-pratik-gupta-2748716.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.hero h2 {
+    color: #31343d;
+    background: #92ccce;
+    padding: 20px;
+    float: right;
+}
+
+article {
+    color: #31343d;
+    
+
+
 }
