@@ -3,11 +3,57 @@
     padding: 0;
     margin: 0;
 }
- 
-body {
-    background-color: #eeeef7;
+
+/* added a root directory, so far only colors but I might change that as I go */
+:root {
+    --darkblue: #445877;
+    --lightblue: #92CCCE;
+    --gray: #31343D;
+    --black: #1C1D21;
+    --white:  #eeeef7;
 }
 
+/* originally I was changing all this in each container so I added a body to to catch it all */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/* Added flex to the header.  I have the code I started with in another commit.  While it fit the look on my screen it was not applicable for all sizes */
+/* This is the code my study group helped me to build and the flex is much nicer */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gray);
+}
+
+header h1 {
+    padding-left: .75em;
+    font-size: 2em;
+    align-items: center;
+    display: inline-block;
+    color: var(--gray);;
+    background: var(--lightblue);
+   
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+/* made the padding an em instead of a px */
+nav a {
+    flex-wrap: wrap;
+    display: inline-block;
+    font-size: 1.5em;
+    color: var(--lightblue);
+    padding: 1em;
+    text-decoration: underline;
+}
+/* 
 .header {
     background: #31343d;
     color: #31343d;
@@ -46,7 +92,7 @@ nav ul {
 
 .header li {
     float: right;
-}
+} */
 
 
 .hero {
@@ -74,7 +120,7 @@ article {
     float: right;
     word-spacing: 3px;
 }
-
+/* starting by using floats to create */
 main {
     clear: both;
     float: right; 
