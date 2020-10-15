@@ -9,30 +9,29 @@ body {
 }
 
 .header {
-    padding: 40px;
     background: #31343d;
     color: #31343d;
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-bottom: 22px;
+    padding-top: 12px;
  } 
   
     
 .header h1 {
     color: #31343d;
     background: #92ccce;
-    padding: 5px;
     float: left;
-    font-size: 40px;
-    width: 33%;
+    font-size: 50px;
+    width: 50%;
     height: 90%;
-    margin-right: 0px;
+    text-align: right;
+
     
 }
 
 .header a {
     color: #92ccce;
     display: block;
-    padding: 7px 8px;
+    padding: 7px 8px; 
     font-size: 20px;
     letter-spacing: 3px;
     text-decoration: underline;
@@ -66,8 +65,55 @@ nav ul {
 }
 
 article {
+    clear: both;
     color: #31343d;
+    background:  #eeeef7;
+    width: 73%;
+    padding: 20px;
+    display: block;
+    float: right;
+    word-spacing: 3px;
+}
+
+main {
+    clear: both;
+    float: right; 
+}
+
+/* .littlebox img {
+    width: 25%;
     
+} */
 
+/* .work {
+flex: 1 0 0;
+padding: 10px;
+text-align: center;
+border-style: solid;
+border-width: 1px;
+} */
 
+aside {
+    color: #445877;
+    background:  #eeeef7;
+    float: left;
+}
+
+/* trying to find the element that will change the color of my text */
+#contact {
+    color: #445877;
+    background: #eeeef7;
+    clear: both;
+    float: right;
+}
+
+ul#listOfLinks {
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    word-spacing: 190px;
+} 
+
+ul#listOfLinks li {
+    display: inline;
 }
