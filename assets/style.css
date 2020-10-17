@@ -18,12 +18,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: var(--black);
-    background-color: var(--white);
+    /* background-color: var(--white); */
 }
 
 /* Added flex to the header.  I have the code I started with in another commit.  While it fit the look on my screen it was not applicable for all sizes */
 /* This is the code my study group helped me to build and the flex is much nicer */
 header {
+    padding: .5em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,6 +44,7 @@ nav ul{
     display: flex;
     justify-content: space-between;
 }
+
 /* made the padding an em instead of a px */
 nav a {
     flex-wrap: wrap;
@@ -75,26 +77,79 @@ nav a {
     right: 3em; 
 }
 
+.AboutMe {
+    font-size: 3em;
+    color: var(--darkblue);
+    border-right: .25em solid var(--darkblue);
+    height: 5em;
+    margin-right: .25em;
+    position: relative;
+    padding-right: .25em;
+    padding-left: 4em;
+}
+
+article {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+article .Me {
+    background-image: url(../assets/images/me.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 12em;
+    height: 15em; 
+    flex-basis: auto;
+}
+
+article p {
+    font-size: 1em;
+    padding: 1em;
+    /* width: 60em; */
+    padding-top: 3em;  
+    flex-wrap: wrap; 
+}
+
+
+
 main .surf {
     padding: 8em;
-    margin: 2em;
-    margin-left: 10em;
-    margin-right: 10em;
+    margin: .8em;
+    width: 60em;
+    height: 22em;
     background-image: url("../assets/images/surf.jpg");
     background-size: cover;
     background-position: center ;
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
-    flex: ;
+    display: flex;
+    justify-content: flex-start;
+    flex: 40%;
+    display: flex;
+} 
 
+.work div {
+    border-right: 6px solid var(--darkblue);
+    height: 3em;
+    position: relative;
+    padding-right: .25em;
+    font-size: 3em;
+    color: var(--darkblue);
+    display:flex;
+    padding-left: 4em;
+    padding-top: 1em;
+    padding-right: 1em;
+    display: flex;
 }
 
+
+
 main .boats {
-    padding: 3.5em;
-    margin: 2em;
-    margin-left: 20em;
-    margin-right: 20em;
+    padding: 4em;
+    margin: .8em; 
+    width: 30em;
+    height: 9em;
     background-image: url("../assets/images/boats.jpg");
     background-size: cover;
     background-position: center ;
@@ -102,27 +157,27 @@ main .boats {
     border-style: solid;
     border-color: var(--lightblue);
 
+
 }
 
-main .car {
-    padding: 3.5em;
-    margin: 2em;
-    margin-left: 20em;
-    margin-right: 20em;
-    background-image: url("../assets/images/car.jpg");
+main .enter {
+    padding: 4em;
+    margin: .8em;
+    width: 30em;
+    height: 9em;
+    background-image: url("../assets/images/enter.jpg");
     background-size: cover;
     background-position: center ;
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
-
 }
 
 main .cloud {
-    padding: 3.5em;
-    margin: 2em;
-    margin-left: 20em;
-    margin-right: 20em;
+    padding: 4em;
+    margin: .8em;
+    width: 30em;
+    height: 9em;
     background-image: url("../assets/images/cloud.jpg");
     background-size: cover;
     background-position: center ;
@@ -132,103 +187,30 @@ main .cloud {
 
 }
 
-main .enter {
-    padding: 3.55em;
-    margin: 2em;
-    margin-left: 20em;
-    margin-right: 20em;
-    background-image: url("../assets/images/enter.jpg");
+main .car {
+    padding: 4em;
+    margin: .8em;
+    width: 30em;
+    height: 9em;
+    background-image: url("../assets/images/car.jpg");
     background-size: cover;
     background-position: center ;
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
-
 }
-
-
-article {
-    display: block;
-    clear: both;
-    color: #31343d;
-    background:  #eeeef7;
-    width: 73%;
-    padding: 20px;
-    display: block;
-    word-spacing: 3px;
-}
-
-article header {
-    display: flex;
-    flex-direction: row;
-
-}
-
-/* main {
-    /* Turns this element into a flexbox */
-    /* display: flex;
-    margin-top: 2%;
-  } */
-  /* .main-header {
-    display: flex;
-    /* Defines how to distribute the empty space between child elements */
-    /* justify-content: space-between;
-    padding: 60px;
-    background: #13293d;
-    color: #fff;
-  } */ 
-
-/* section .surf{
-    border: solid;
-    height: 24%;
-    width: 49.5%;
-    border-color: var(--lightblue); */
-
-/* }
-.boxes {
-    /* A flex-basis of 200px sets the starting width */
-    /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
-    /* flex: 1 0 200px;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-  } */ 
-/*   
-  .boxes p {
-    padding: 20px;
-    background: #13293d;
-    color: #fff;
-  } */ 
-/* .littlebox img {
-    width: 25%;
-    
-} */
-
-/* .work {
-flex: 1 0 0;
-padding: 10px;
-text-align: center;
-border-style: solid;
-border-width: 1px;
-} */
-
-/* aside {
-    color: #445877;
-    background:  #eeeef7;
-    /* float: left; */
-
-
-
-
-ul#listOfLinks {
-    font-size: 20px;
-    letter-spacing: 3px;
-    padding-top: 20px;
-    word-spacing: 190px;
-    float: right;
-}  
 
 ul#listOfLinks li {
     display: inline;
+    float: right;
+}
+
+footer a {
+    flex-wrap: wrap;
+    display: inline-block;
+    font-size: 1em;
+    color: var(--gray);
+    padding: 1em;
+    margin-right: 2em;
+    text-decoration: underline;
 }
