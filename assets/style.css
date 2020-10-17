@@ -77,20 +77,21 @@ nav a {
     right: 3em; 
 }
 
+/* I can not for the life of me figure out how to keep the image from chaning its shape and size */
+article {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
 .AboutMe {
     font-size: 3em;
     color: var(--darkblue);
     border-right: .25em solid var(--darkblue);
-    height: 5em;
+    height: 6em;
     margin-right: .25em;
-    position: relative;
     padding-right: .25em;
     padding-left: 4em;
-}
-
-article {
-    display: inline-flex;
-    flex-wrap: wrap;
+    text-align: right;
 }
 
 article .Me {
@@ -98,57 +99,67 @@ article .Me {
     background-size: cover;
     background-position: center;
     width: 12em;
-    height: 15em; 
-    flex-basis: auto;
+    padding: 8.5em;  
 }
 
+/* How do I get this to wrap under the image? */
 article p {
-    font-size: 1em;
-    padding: 1em;
-    /* width: 60em; */
-    padding-top: 3em;  
-    flex-wrap: wrap; 
+    padding: 1em; 
+    padding-top: 3em; 
+    font-size: larger;
+    width: 45em; 
+}
+ 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
+.work div {
+    font-size: 3em;
+    color: var(--darkblue);
+    border-right: .25em solid var(--darkblue);
+    padding-right: .25em;
+    padding-left: 4.3em;
+    text-align: right;
+    margin-top: .25em;
+}
 
-
+/* changing my margins to line up my border is 100% wrong but I am not sure what else to do */
 main .surf {
     padding: 8em;
-    margin: .8em;
-    width: 60em;
+    margin: 1.95em;
+    width: 65.75em;
     height: 22em;
+    margin-left: 7em;
     background-image: url("../assets/images/surf.jpg");
     background-size: cover;
     background-position: center ;
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
-    display: flex;
-    justify-content: flex-start;
-    flex: 40%;
-    display: flex;
+    position: relative;
 } 
 
-.work div {
-    border-right: 6px solid var(--darkblue);
-    height: 3em;
-    position: relative;
-    padding-right: .25em;
-    font-size: 3em;
-    color: var(--darkblue);
-    display:flex;
-    padding-left: 4em;
-    padding-top: 1em;
-    padding-right: 1em;
-    display: flex;
+.surf h2 {
+    color: #31343d;
+    background: #92ccce;
+    padding: .25em;
+    font-size: 1.5em;
+    float: left;
+    margin: .5em;
+    position: absolute;
+    bottom: .25em;
+    left: 3em; 
 }
 
-
-
 main .boats {
+    display: flex;
+    flex-direction: row-reverse;
     padding: 4em;
     margin: .8em; 
-    width: 30em;
+    width: 32em;
     height: 9em;
     background-image: url("../assets/images/boats.jpg");
     background-size: cover;
@@ -156,14 +167,24 @@ main .boats {
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
-
-
 }
+
+/* .boats h2 {
+    color: #31343d;
+    background: #92ccce;
+    padding: .25em;
+    font-size: 1.5em;
+    float: left;
+    margin: .5em;
+    position: absolute;
+    bottom: .25em;
+    left: 3em; 
+} */
 
 main .enter {
     padding: 4em;
     margin: .8em;
-    width: 30em;
+    width: 32em;
     height: 9em;
     background-image: url("../assets/images/enter.jpg");
     background-size: cover;
@@ -173,10 +194,23 @@ main .enter {
     border-color: var(--lightblue);
 }
 
+/* .main h2 {
+    color: #31343d;
+    background: #92ccce;
+    padding: .25em;
+    font-size: 1.5em;
+    float: left;
+    margin: .5em;
+    position: absolute;
+    bottom: .25em;
+    left: 3em; 
+} */
+
+
 main .cloud {
     padding: 4em;
     margin: .8em;
-    width: 30em;
+    width: 32em;
     height: 9em;
     background-image: url("../assets/images/cloud.jpg");
     background-size: cover;
@@ -184,13 +218,24 @@ main .cloud {
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
-
 }
+
+/* .cloud h2 {
+    color: #31343d;
+    background: #92ccce;
+    padding: .25em;
+    font-size: 1.5em;
+    float: left;
+    margin: .5em;
+    position: absolute;
+    bottom: .25em;
+    left: 3em; 
+} */
 
 main .car {
     padding: 4em;
     margin: .8em;
-    width: 30em;
+    width: 32em;
     height: 9em;
     background-image: url("../assets/images/car.jpg");
     background-size: cover;
@@ -199,6 +244,35 @@ main .car {
     border-style: solid;
     border-color: var(--lightblue);
 }
+
+/* .car h2 {
+    color: #31343d;
+    background: #92ccce;
+    padding: .25em;
+    font-size: 1.5em;
+    float: left;
+    margin: .5em;
+    position: absolute;
+    bottom: .25em;
+    left: 3em; 
+} */
+
+footer {
+    display: flex;
+}
+
+ footer div {   
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 3em;
+    color: var(--darkblue);
+    border-right: .25em solid var(--darkblue);
+    height: 3em;
+    margin-right: .25em;
+    padding-right: .25em;
+    padding-left: 4em;
+    text-align: right;
+ }
 
 ul#listOfLinks li {
     display: inline;
