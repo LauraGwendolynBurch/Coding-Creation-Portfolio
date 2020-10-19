@@ -22,6 +22,8 @@ body {
 
 /* Added flex to the header.  I have the code I started with in another commit.  While it fit the look on my screen it was not applicable for all sizes */
 /* This is the code my study group helped me to build and the flex is much nicer */
+/* I will add @media later */
+/* ALL of this still needs to be cleaned up and reorganized.  There is a fair amount of extra code in here */
 header {
     padding: .5em;
     display: flex;
@@ -44,7 +46,11 @@ nav ul{
     justify-content: space-between;
 }
 
-/* made the padding an em instead of a px */
+ul li :hover {
+    color: var(--white);
+}
+
+/* resume link is not active yet */
 nav a {
     flex-wrap: wrap;
     display: inline-block;
@@ -65,8 +71,8 @@ nav a {
 }
 
 .hero h2 {
-    color: #31343d;
-    background: #92ccce;
+    color: var(--gray);
+    background: var(--lightblue);
     padding: .25em;
     font-size: 1.5em;
     float: right;
@@ -76,14 +82,16 @@ nav a {
     right: 3em; 
 }
 
-/* I can not for the life of me figure out how to keep the image from chaning its shape and size */
+/* first time working with flex */
+/* I would approach the code differently in the future */
+/* alt tags on images  */
 article {
     display: flex;
     flex-wrap: wrap;
 } 
 
+/* switched from em to % for easy flow */
 .AboutMe {
-    text-align: right; 
     color: var(--darkblue);
     margin-right: 20px;
     padding-right: 3px;
@@ -103,14 +111,15 @@ main {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: right;
 }
 
+/* I can not figure out how to align the text for #work and #contactme right. Only #aboutme worked */
 .boxes {
     display:flex;
     flex-direction: row; 
     flex-wrap: wrap;
     width: 70%;
-    justify-content: unset;
 } 
 
 .Work {
@@ -121,12 +130,13 @@ main {
     border-right: 5px solid;
     font-size: 3em;
     width: 24%;
-    display: flex; s
-    justify-content: flex-end;
+    display: flex; 
     margin-top: 30px;
 }
 
-/* changing my margins to line up my border is 100% wrong but I am not sure what else to do */
+/* first time using background images, I was able to get them to do what I needed */
+/* moved the second line of text in the h2 tag and added a line break.  Look back at making it a p tag and addind it back in */
+/* find a way to keep the h2 tags inside the backgroud image */
 main .surf {
     padding: 8em; 
     width: 80%;
@@ -138,12 +148,11 @@ main .surf {
     border-color: var(--lightblue);
     position: relative;
     margin-top: 30px;
-
 } 
 
 .surf h2 {
-    color: #31343d;
-    background: #92ccce;
+    color: var(--gray);
+    background: var(--lightblue);
     padding: .25em;
     font-size: 1.5em;
     float: left;
@@ -153,6 +162,8 @@ main .surf {
     left: 3em; 
 }
 
+/* better align the images */
+/* add links to work section */
 main .boats {
     padding: 4em;
     margin: .8em; 
@@ -171,8 +182,8 @@ main .boats {
 }
 
 .boats h2 {
-    color: #31343d;
-    background: #92ccce;
+    color: var(--gray);
+    background: var(--lightblue);
     padding: .25em;
     font-size:.5;
     float: left;
@@ -197,8 +208,8 @@ main .enter {
 }
 
 .enter h2 {
-    color: #31343d;
-    background: #92ccce;
+    color: var(--gray);
+    background: var(--lightblue);
     padding: .25em;
     font-size: .5;
     float: left;
@@ -224,8 +235,8 @@ main .cloud {
 }
 
 .cloud h2 {
-    color: #31343d;
-    background: #92ccce;
+    color: var(--gray);
+    background: var(--lightblue);
     padding: .25em;
     font-size: .5;
     float: left;
@@ -250,8 +261,8 @@ main .car {
 }
 
 .car h2 {
-    color: #31343d;
-    background: #92ccce;
+    color: var(--gray);
+    background: var(--lightblue);
     padding: .25em;
     font-size: .5;
     float: left;
@@ -264,14 +275,12 @@ main .car {
 footer {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.contactMe{
-    text-align: right;
+.contactMe {
     color: var(--darkblue);
-    margin-right: 20px;
-    padding-right: 3px;
+    margin-right: 20px; 
+    padding-right: 3px; 
     border-right: 5px solid;
     font-size: 3em;
     width: 24%;
