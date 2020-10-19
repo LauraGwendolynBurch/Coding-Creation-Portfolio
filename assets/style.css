@@ -18,7 +18,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: var(--black);
-    /* background-color: var(--white); */
 }
 
 /* Added flex to the header.  I have the code I started with in another commit.  While it fit the look on my screen it was not applicable for all sizes */
@@ -84,55 +83,53 @@ article {
 } 
 
 .AboutMe {
-    font-size: 3em;
+    text-align: right; 
     color: var(--darkblue);
-    border-right: .25em solid var(--darkblue);
-    height: 6em;
-    margin-right: .25em;
-    padding-right: .25em;
-    padding-left: 4em;
-    text-align: right;
+    margin-right: 20px;
+    padding-right: 3px;
+    border-right: 5px solid;
+    font-size: 3em;
+    width: 24%;
 }
 
-article .Me {
-    background-image: url(../assets/images/me.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 12em;
-    padding: 8.5em;  
-}
-
-/* How do I get this to wrap under the image? */
 article p {
     padding: 1em; 
     padding-top: 3em; 
     font-size: larger;
-    width: 45em; 
-}
- 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    width: 50%;
 }
 
-.work div {
-    font-size: 3em;
-    color: var(--darkblue);
-    border-right: .25em solid var(--darkblue);
-    padding-right: .25em;
-    padding-left: 4.3em;
+main {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.boxes {
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: unset;
+} 
+
+.Work {
     text-align: right;
-    margin-top: .25em;
+    color: var(--darkblue);
+    margin-right: 20px;
+    padding-right: 3px;
+    border-right: 5px solid;
+    font-size: 3em;
+    width: 24%;
+    display: flex; s
+    justify-content: flex-end;
+    margin-top: 30px;
 }
 
 /* changing my margins to line up my border is 100% wrong but I am not sure what else to do */
 main .surf {
-    padding: 8em;
-    margin: 1.95em;
-    width: 65.75em;
-    height: 22em;
-    margin-left: 7em;
+    padding: 8em; 
+    width: 80%;
     background-image: url("../assets/images/surf.jpg");
     background-size: cover;
     background-position: center ;
@@ -140,6 +137,8 @@ main .surf {
     border-style: solid;
     border-color: var(--lightblue);
     position: relative;
+    margin-top: 30px;
+
 } 
 
 .surf h2 {
@@ -155,11 +154,9 @@ main .surf {
 }
 
 main .boats {
-    display: flex;
-    flex-direction: row-reverse;
     padding: 4em;
     margin: .8em; 
-    width: 32em;
+    width: 38%;
     height: 9em;
     background-image: url("../assets/images/boats.jpg");
     background-size: cover;
@@ -167,24 +164,28 @@ main .boats {
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
+    display: flex;
+    justify-content: right;
+    position: relative;
+    
 }
 
-/* .boats h2 {
+.boats h2 {
     color: #31343d;
     background: #92ccce;
     padding: .25em;
-    font-size: 1.5em;
+    font-size:.5;
     float: left;
     margin: .5em;
     position: absolute;
     bottom: .25em;
     left: 3em; 
-} */
+}
 
 main .enter {
     padding: 4em;
     margin: .8em;
-    width: 32em;
+    width: 38%;
     height: 9em;
     background-image: url("../assets/images/enter.jpg");
     background-size: cover;
@@ -192,25 +193,26 @@ main .enter {
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
+    position: relative;
 }
 
-/* .main h2 {
+.enter h2 {
     color: #31343d;
     background: #92ccce;
     padding: .25em;
-    font-size: 1.5em;
+    font-size: .5;
     float: left;
     margin: .5em;
     position: absolute;
     bottom: .25em;
     left: 3em; 
-} */
+}
 
 
 main .cloud {
     padding: 4em;
     margin: .8em;
-    width: 32em;
+    width: 38%;
     height: 9em;
     background-image: url("../assets/images/cloud.jpg");
     background-size: cover;
@@ -218,24 +220,25 @@ main .cloud {
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
+    position: relative;
 }
 
-/* .cloud h2 {
+.cloud h2 {
     color: #31343d;
     background: #92ccce;
     padding: .25em;
-    font-size: 1.5em;
+    font-size: .5;
     float: left;
     margin: .5em;
     position: absolute;
     bottom: .25em;
     left: 3em; 
-} */
+}
 
 main .car {
     padding: 4em;
     margin: .8em;
-    width: 32em;
+    width: 38%;
     height: 9em;
     background-image: url("../assets/images/car.jpg");
     background-size: cover;
@@ -243,46 +246,47 @@ main .car {
     border: .5em;
     border-style: solid;
     border-color: var(--lightblue);
+    position: relative;
 }
 
-/* .car h2 {
+.car h2 {
     color: #31343d;
     background: #92ccce;
     padding: .25em;
-    font-size: 1.5em;
+    font-size: .5;
     float: left;
     margin: .5em;
     position: absolute;
     bottom: .25em;
     left: 3em; 
-} */
-
-footer {
-    display: flex;
 }
 
- footer div {   
-    display: flex;
+footer {
+    display:flex;
     flex-wrap: wrap;
-    font-size: 3em;
-    color: var(--darkblue);
-    border-right: .25em solid var(--darkblue);
-    height: 3em;
-    margin-right: .25em;
-    padding-right: .25em;
-    padding-left: 4em;
+    justify-content: space-between;
+}
+
+.contactMe{
     text-align: right;
- }
+    color: var(--darkblue);
+    margin-right: 20px;
+    padding-right: 3px;
+    border-right: 5px solid;
+    font-size: 3em;
+    width: 24%;
+    display: flex; 
+    margin-top: 30px;
+}
 
 ul#listOfLinks li {
     display: inline;
-    float: right;
 }
 
 footer a {
     flex-wrap: wrap;
     display: inline-block;
-    font-size: 1em;
+    font-size: 1.5em;
     color: var(--gray);
     padding: 1em;
     margin-right: 2em;
