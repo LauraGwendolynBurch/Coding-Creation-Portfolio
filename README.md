@@ -15,7 +15,7 @@ The concept here is to mimic a currrent website's application appearance and fun
 * ui scrolls to corresponding section
 
 ## Link to Project 
-[Coding Creation Portfolio](http://www.lauragwendolynburch.github.io/coding-creation-portfolio/)
+[Coding Creation Portfolio](www.lauragwendolynburch.github.io/coding-creation-portfolio/)
 
 ### Example Webpage
 ![ Image Mock ](./assets/images/Mockup.png)
