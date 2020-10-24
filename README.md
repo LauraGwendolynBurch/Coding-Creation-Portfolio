@@ -29,5 +29,5 @@ http://www.lauragwendolynburch.github.io/coding-creation-portfolio/
 ### Sample CSS
 ![ Image CSS](./assets/images/samplecss.png)
 
-##User Notes
-This was wildly challenging to me. I am 100% new to this world.  I spent over 30 hours on the original project.  I finally had to put it down and take a break.  I would still like to rework and clean up the css and add media queries. Some of my formatting is not where I would like it to be, and of course the are no links in the work section...yet! I am excited to see what I will be able to do with this in the future.   
+## User Notes
+This was wildly challenging to me. I am 100% new to coding.  I spent over 30 hours on the original project.  I finally had to put it down and take a break.  I would still like to rework and clean up the css and add media queries. Some of my formatting in my main is not where I would like it to be, and of course the are no links in the work section...yet! I am excited to see what I will be able to do with this in the future.   
